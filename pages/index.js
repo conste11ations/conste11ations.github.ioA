@@ -14,13 +14,19 @@ export default function Home() {
         <h1 className={styles.title}>Conste11ations</h1>
 
         <p className={styles.description}>
+          {/* <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}> */}
           <code className={styles.code}>blog</code>
+          {/* </motion.div> */}
         </p>
 
         <div className={styles.grid}>
           <div className={styles.card}>
             <h3>About</h3>
-            <p>Icons to come</p>
+            <p>
+              <a href="https://github.com/conste11ations/">
+                <img src="github.svg" alt="github" />
+              </a>
+            </p>
           </div>
 
           <a href="#" className={styles.card}>
