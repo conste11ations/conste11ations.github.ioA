@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "build-export": "bash -c 'rm -fr ../conste11ations.github.io/{404.html,_next,index.html,posts} && npm run build && npx next export && cp -a out/. ../conste11ations.github.io'"
   },
   "dependencies": {
     "next": "10.0.6",
