@@ -21,12 +21,12 @@ export default function Home() {
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
             <h3>About</h3>
-            <p>Description 1</p>
+            <p>Who I am.</p>
           </a>
 
           <a href="https://nextjs.org/learn" className={styles.card}>
             <h3>Ideas</h3>
-            <p>Description 2</p>
+            <p>When I pen my thoughts down.</p>
           </a>
 
           <a
@@ -34,15 +34,15 @@ export default function Home() {
             className={styles.card}
           >
             <h3>Code</h3>
-            <p>Description 3</p>
+            <p>When I code.</p>
           </a>
 
           <a
             href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
             className={styles.card}
           >
-            <h3>Other</h3>
-            <p>Description 4</p>
+            <h3>Research</h3>
+            <p>Notes from researching various topics.</p>
           </a>
         </div>
       </main>
