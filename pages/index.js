@@ -14,9 +14,9 @@ export default function Home() {
         <h1 className={styles.title}>Conste11ations</h1>
 
         <p className={styles.description}>
-          {/* <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}> */}
+          <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
           <code className={styles.code}>blog</code>
-          {/* </motion.div> */}
+          </motion.div>
         </p>
 
         <div className={styles.grid}>
