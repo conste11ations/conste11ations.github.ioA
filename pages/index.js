@@ -21,7 +21,11 @@ export default function Home() {
         </p>
 
         <div className={styles.grid}>
-          <div className={styles.card}>
+          <motion.div
+            animate={{ scale: 1.1 }}
+            transition={{ duration: 1 }}
+            className={styles.card}
+          >
             <h3>
               <Link href="/about">About</Link>
             </h3>
@@ -30,25 +34,37 @@ export default function Home() {
                 <img src="github.svg" alt="github" />
               </a>
             </p>
-          </div>
-          <div className={styles.card}>
+          </motion.div>
+          <motion.div
+            animate={{ scale: 1.1 }}
+            transition={{ duration: 1 }}
+            className={styles.card}
+          >
             <a href="#">
               <h3>Ideas</h3>
               <p>When I pen my thoughts down</p>
             </a>
-          </div>
-          <div className={styles.card}>
+          </motion.div>
+          <motion.div
+            animate={{ scale: 1.1 }}
+            transition={{ duration: 1 }}
+            className={styles.card}
+          >
             <a href="#">
               <h3>Code</h3>
               <p>When I code or explain tech things</p>
             </a>
-          </div>
-          <div className={styles.card}>
+          </motion.div>
+          <motion.div
+            animate={{ scale: 1.1 }}
+            transition={{ duration: 1 }}
+            className={styles.card}
+          >
             <a href="#">
               <h3>Research</h3>
               <p>After researching various topics</p>
             </a>
-          </div>
+          </motion.div>
         </div>
       </main>
 
