@@ -30,9 +30,17 @@ export default function Home() {
               <Link href="/about">About</Link>
             </h3>
             <p>
-              <a href="https://github.com/conste11ations/">
-                <img src="github.svg" alt="github" />
-              </a>
+              <motion.div
+                animate={{
+                  scale: [1, 2, 2, 1, 1],
+                  rotate: [0, 0, 270, 270, 0],
+                  borderRadius: ["20%", "20%", "50%", "50%", "20%"],
+                }}
+              >
+                <a href="https://github.com/conste11ations/">
+                  <img src="github.svg" alt="github" />
+                </a>
+              </motion.div>
             </p>
           </motion.div>
           <motion.div
