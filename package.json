@@ -6,8 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "prettier": "npx prettier --write .",
-    "build-export": "bash -c 'rm -fr ../conste11ations.github.io/{404.html,_next,index.html,posts} && npm run build && npx next export && cp -a out/. ../conste11ations.github.io'"
+    "prettier": "npx prettier --write './pages/*'",
+    "build-export": "bash -c 'rm -fr ../conste11ations.github.io/{404.html,_next,index.html,posts} && npm run build && npx next export && cp -a out/. ../conste11ations.github.io'",
+    "deploy": "git add . && git commit -m 'commit' && git push"
   },
   "dependencies": {
     "framer-motion": "^3.3.0",

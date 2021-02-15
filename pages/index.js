@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -15,34 +16,39 @@ export default function Home() {
 
         <p className={styles.description}>
           <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-          <code className={styles.code}>blog</code>
+            <code className={styles.code}>blog</code>
           </motion.div>
         </p>
 
         <div className={styles.grid}>
           <div className={styles.card}>
-            <h3>About</h3>
+            <h3>
+              <Link href="/about">About</Link>
+            </h3>
             <p>
               <a href="https://github.com/conste11ations/">
                 <img src="github.svg" alt="github" />
               </a>
             </p>
           </div>
-
-          <a href="#" className={styles.card}>
-            <h3>Ideas</h3>
-            <p>When I pen my thoughts down</p>
-          </a>
-
-          <a href="#" className={styles.card}>
-            <h3>Code</h3>
-            <p>When I code or explain tech things</p>
-          </a>
-
-          <a href="#" className={styles.card}>
-            <h3>Research</h3>
-            <p>After researching various topics</p>
-          </a>
+          <div className={styles.card}>
+            <a href="#">
+              <h3>Ideas</h3>
+              <p>When I pen my thoughts down</p>
+            </a>
+          </div>
+          <div className={styles.card}>
+            <a href="#">
+              <h3>Code</h3>
+              <p>When I code or explain tech things</p>
+            </a>
+          </div>
+          <div className={styles.card}>
+            <a href="#">
+              <h3>Research</h3>
+              <p>After researching various topics</p>
+            </a>
+          </div>
         </div>
       </main>
 
