@@ -14,11 +14,11 @@ export default function Home() {
       <main className={styles.main}>
         <h1 className={styles.title}>Conste11ations</h1>
 
+          <motion.div whileHover={{ scale: 1.3 }} whileTap={{ scale: 0.9 }}>
         <p className={styles.description}>
-          <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
             <code className={styles.code}>blog</code>
-          </motion.div>
         </p>
+          </motion.div>
 
         <div className={styles.grid}>
           <motion.div
@@ -29,19 +29,19 @@ export default function Home() {
             <h3>
               <Link href="/about">About</Link>
             </h3>
-            <p>
               <motion.div
                 animate={{
                   scale: [1, 2, 2, 1, 1],
                   rotate: [0, 0, 270, 270, 0],
                   borderRadius: ["20%", "20%", "50%", "50%", "20%"],
                 }}
-              >
+                >
+                <p>
                 <a href="https://github.com/conste11ations/">
                   <img src="github.svg" alt="github" />
                 </a>
-              </motion.div>
             </p>
+              </motion.div>
           </motion.div>
           <motion.div
             animate={{ scale: 1.1 }}
