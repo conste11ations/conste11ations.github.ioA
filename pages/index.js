@@ -22,7 +22,7 @@ export default function Home() {
 
         <div className={styles.grid}>
           <motion.div
-            animate={{ scale: 1.1 }}
+            animate={{ scale: [1.1, 1] }}
             transition={{ duration: 1 }}
             className={styles.card}
           >
@@ -44,7 +44,7 @@ export default function Home() {
             </motion.div>
           </motion.div>
           <motion.div
-            animate={{ scale: 1.1 }}
+            animate={{ scale: [1.1, 1] }}
             transition={{ duration: 1 }}
             className={styles.card}
           >
@@ -54,7 +54,7 @@ export default function Home() {
               </a>
           </motion.div>
           <motion.div
-            animate={{ scale: 1.1 }}
+            animate={{ scale: [1.1, 1] }}
             transition={{ duration: 1 }}
             className={styles.card}
           >
@@ -64,7 +64,7 @@ export default function Home() {
             </a>
           </motion.div>
           <motion.div
-            animate={{ scale: 1.1 }}
+            animate={{ scale: [1.1, 1] }}
             transition={{ duration: 1 }}
             className={styles.card}
           >
