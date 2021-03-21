@@ -58,7 +58,9 @@ export default function Home() {
             <p>When I code or explain tech things</p>
             <ul>
               <li>
-                <a href="#" class="special-link">Angular Change Detection & NgRX Push Pipe</a>
+                <a href="#" class="special-link">Zones, Zone.js, NgZone</a>                
+                <a href="#" class="special-link">Change Detection in Angular</a>
+                <a href="#" class="special-link">Alternatives to the Async Pipe</a>
               </li>
             </ul>
           </motion.div>
