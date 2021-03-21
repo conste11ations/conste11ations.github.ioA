@@ -11,6 +11,37 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  font-size: 12px;
+}
+
+.special-link {
+  position: relative;
+  z-index: 1;
+}
+.special-link:hover {
+  /* color: var(--clr-neutral); */
+  color: white;
+}
+
+.special-link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  background: #324f60;
+
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 250ms ease-in;
+
+  z-index: -1;
+}
+
+.special-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 * {

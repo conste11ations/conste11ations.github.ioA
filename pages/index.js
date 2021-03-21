@@ -26,9 +26,7 @@ export default function Home() {
             transition={{ duration: 1 }}
             className={styles.card}
           >
-            <h3>
-              <Link href="/about">About</Link>
-            </h3>
+            <h3>About</h3>
             <motion.div
               animate={{
                 scale: [1, 2, 2, 1, 1],
@@ -37,9 +35,9 @@ export default function Home() {
               }}
             >
               <p>
-                <a href="https://github.com/conste11ations/">
+                <Link href="https://github.com/conste11ations/">
                   <img src="github.svg" alt="github" />
-                </a>
+                </Link>
               </p>
             </motion.div>
           </motion.div>
@@ -48,30 +46,29 @@ export default function Home() {
             transition={{ duration: 1 }}
             className={styles.card}
           >
-              <a href="#">
                 <h3>Ideas</h3>
                 <p>When I pen my thoughts down</p>
-              </a>
           </motion.div>
           <motion.div
             animate={{ scale: [1.1, 1] }}
             transition={{ duration: 1 }}
             className={styles.card}
           >
-            <a href="#">
               <h3>Code</h3>
-              <p>When I code or explain tech things</p>
-            </a>
+            <p>When I code or explain tech things</p>
+            <ul>
+              <li>
+                <a href="#" class="special-link">Angular Change Detection & NgRX Push Pipe</a>
+              </li>
+            </ul>
           </motion.div>
           <motion.div
             animate={{ scale: [1.1, 1] }}
             transition={{ duration: 1 }}
             className={styles.card}
           >
-            <a href="#">
               <h3>Research</h3>
               <p>After researching various topics</p>
-            </a>
           </motion.div>
         </div>
       </main>
