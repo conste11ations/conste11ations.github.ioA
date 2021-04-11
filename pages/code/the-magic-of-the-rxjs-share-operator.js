@@ -45,7 +45,7 @@ import { share, map } from 'rxjs/operators';
             {`const source = interval(1000)
    .pipe(
          map((x: number) => {
-             console.log('Intense computation for: ', x)
+             console.log('INTENSE computation for: ', x)
              return x * x;
          })
  );
@@ -55,17 +55,17 @@ source.subscribe(x => console.log('subscription 2: ', x));
  `}
           </pre>
           <pre className="grey">{`// Console:
-// Intense computation for:  0
+// INTENSE computation for:  0
 // subscription 1:  0
-// Intense computation for:  0
+// INTENSE computation for:  0
 // subscription 2:  0
-// Intense computation for:  1
+// INTENSE computation for:  1
 // subscription 1:  1
-// Intense computation for:  1
+// INTENSE computation for:  1
 // subscription 2:  1
-// Intense computation for:  2
+// INTENSE computation for:  2
 // subscription 1:  4
-// Intense computation for:  2
+// INTENSE computation for:  2
 // subscription 2:  4`}</pre>
         </code>
         <p>
@@ -90,13 +90,13 @@ source.subscribe(x => console.log('subscription 2: ', x));
  );`}
           </pre>
           <pre className="grey">{`// Console:
-// Intense computation for:  0
+// INTENSE computation for:  0
 // subscription 1:  0
 // subscription 2:  0
-// Intense computation for:  1
+// INTENSE computation for:  1
 // subscription 1:  1
 // subscription 2:  1
-// Intense computation for:  2
+// INTENSE computation for:  2
 // subscription 1:  4
 // subscription 2:  4`}</pre>
         </code>

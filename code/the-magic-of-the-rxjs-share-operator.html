@@ -1,9 +1,9 @@
-<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width"/><meta name="next-head-count" content="2"/><link rel="preload" href="/_next/static/css/c92e435ddf3ae8b16b25.css" as="style"/><link rel="stylesheet" href="/_next/static/css/c92e435ddf3ae8b16b25.css" data-n-g=""/><link rel="preload" href="/_next/static/css/c10c0aeb38143d3d14a1.css" as="style"/><link rel="stylesheet" href="/_next/static/css/c10c0aeb38143d3d14a1.css" data-n-p=""/><noscript data-n-css=""></noscript><link rel="preload" href="/_next/static/chunks/main-1dbc9559b66052c81aa8.js" as="script"/><link rel="preload" href="/_next/static/chunks/webpack-50bee04d1dc61f8adf5b.js" as="script"/><link rel="preload" href="/_next/static/chunks/framework.abffcf18e526b7c0dbcd.js" as="script"/><link rel="preload" href="/_next/static/chunks/3ef630e34cd10ba68f9d468ac363ff81c534e1e9.af83d799cdb4720969b3.js" as="script"/><link rel="preload" href="/_next/static/chunks/pages/_app-989d30f9205445d4f5c3.js" as="script"/><link rel="preload" href="/_next/static/chunks/pages/code/the-magic-of-the-rxjs-share-operator-6aead7dbf7fa3b87d61c.js" as="script"/></head><body><div id="__next"><div class="Home_container__1EcsU"><h1>The magic of the RxJS share operator</h1><p>There are two main ways to reap the benefits of the RxJS share operator:<ol><li><b>Reduce repeated computations</b><ul><li>When you have multiple subscribers to the same observable, you can process computations (side-effects) once, broadcast the results to whoever is listening.</li></ul></li><li><b>&quot;Everyone&#x27;s on the same page&quot;</b><ul><li>When you have multiple subscribers and you want to make sure they all get the same thing</li></ul></li></ol></p><h2>1. Reduce Repeated Computations</h2><p><b>Without share()</b></p><code class="code"><pre class="grey">import { interval } from &#x27;rxjs&#x27;;
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width"/><meta name="next-head-count" content="2"/><link rel="preload" href="/_next/static/css/8f49d1ed09e5fdaf4ac0.css" as="style"/><link rel="stylesheet" href="/_next/static/css/8f49d1ed09e5fdaf4ac0.css" data-n-g=""/><link rel="preload" href="/_next/static/css/7b50b2cb4d34e2b101d9.css" as="style"/><link rel="stylesheet" href="/_next/static/css/7b50b2cb4d34e2b101d9.css" data-n-p=""/><noscript data-n-css=""></noscript><link rel="preload" href="/_next/static/chunks/main-1dbc9559b66052c81aa8.js" as="script"/><link rel="preload" href="/_next/static/chunks/webpack-50bee04d1dc61f8adf5b.js" as="script"/><link rel="preload" href="/_next/static/chunks/framework.abffcf18e526b7c0dbcd.js" as="script"/><link rel="preload" href="/_next/static/chunks/3ef630e34cd10ba68f9d468ac363ff81c534e1e9.af83d799cdb4720969b3.js" as="script"/><link rel="preload" href="/_next/static/chunks/pages/_app-039cec282a73ef98abf6.js" as="script"/><link rel="preload" href="/_next/static/chunks/pages/code/the-magic-of-the-rxjs-share-operator-b585d9c4303b5d710d95.js" as="script"/></head><body><div id="__next"><div class="Home_container__1EcsU"><h1>The magic of the RxJS share operator</h1><p>There are two main ways to reap the benefits of the RxJS share operator:<ol><li><b>Reduce repeated computations</b><ul><li>When you have multiple subscribers to the same observable, you can process computations (side-effects) once, broadcast the results to whoever is listening.</li></ul></li><li><b>&quot;Everyone&#x27;s on the same page&quot;</b><ul><li>When you have multiple subscribers and you want to make sure they all get the same thing</li></ul></li></ol></p><h2>1. Reduce Repeated Computations</h2><p><b>Without share()</b></p><code class="code"><pre class="grey">import { interval } from &#x27;rxjs&#x27;;
 import { share, map } from &#x27;rxjs/operators&#x27;;
   </pre><pre>const source = interval(1000)
    .pipe(
          map((x: number) =&gt; {
-             console.log(&#x27;Intense computation for: &#x27;, x)
+             console.log(&#x27;INTENSE computation for: &#x27;, x)
              return x * x;
          })
  );
@@ -11,17 +11,17 @@ import { share, map } from &#x27;rxjs/operators&#x27;;
 source.subscribe(x =&gt; console.log(&#x27;subscription 1: &#x27;, x));
 source.subscribe(x =&gt; console.log(&#x27;subscription 2: &#x27;, x));
  </pre><pre class="grey">// Console:
-// Intense computation for:  0
+// INTENSE computation for:  0
 // subscription 1:  0
-// Intense computation for:  0
+// INTENSE computation for:  0
 // subscription 2:  0
-// Intense computation for:  1
+// INTENSE computation for:  1
 // subscription 1:  1
-// Intense computation for:  1
+// INTENSE computation for:  1
 // subscription 2:  1
-// Intense computation for:  2
+// INTENSE computation for:  2
 // subscription 1:  4
-// Intense computation for:  2
+// INTENSE computation for:  2
 // subscription 2:  4</pre></code><p><b>With share()</b></p><code><pre class="grey">import { interval } from &#x27;rxjs&#x27;;
 import { share, map } from &#x27;rxjs/operators&#x27;;
   </pre><pre>const source = interval(1000)
@@ -34,12 +34,12 @@ import { share, map } from &#x27;rxjs/operators&#x27;;
 source.subscribe(x =&gt; console.log(&#x27;subscription 1: &#x27;, x));
 source.subscribe(x =&gt; console.log(&#x27;subscription 2: &#x27;, x));
  );</pre><pre class="grey">// Console:
-// Intense computation for:  0
+// INTENSE computation for:  0
 // subscription 1:  0
 // subscription 2:  0
-// Intense computation for:  1
+// INTENSE computation for:  1
 // subscription 1:  1
 // subscription 2:  1
-// Intense computation for:  2
+// INTENSE computation for:  2
 // subscription 1:  4
-// subscription 2:  4</pre></code></div><div class="Home_footer__1WdhD"><b>Reference documentation</b><ul><li><a href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/share.ts" class="underlined-link">RxJS source code (caution: check your version as the share operator has undergone changes between versions)</a></li><li><a href="https://medium.com/@mikesnare/angular-async-pipes-beware-the-share-bcc9c1cd849d" class="underlined-link">Beware the Share by Mike Snare</a></li></ul></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{}},"page":"/code/the-magic-of-the-rxjs-share-operator","query":{},"buildId":"cgisO3tvby4u9NSJrRkfa","nextExport":true,"autoExport":true,"isFallback":false}</script><script nomodule="" src="/_next/static/chunks/polyfills-feb8a7604fa7fce626b2.js"></script><script src="/_next/static/chunks/main-1dbc9559b66052c81aa8.js" async=""></script><script src="/_next/static/chunks/webpack-50bee04d1dc61f8adf5b.js" async=""></script><script src="/_next/static/chunks/framework.abffcf18e526b7c0dbcd.js" async=""></script><script src="/_next/static/chunks/3ef630e34cd10ba68f9d468ac363ff81c534e1e9.af83d799cdb4720969b3.js" async=""></script><script src="/_next/static/chunks/pages/_app-989d30f9205445d4f5c3.js" async=""></script><script src="/_next/static/chunks/pages/code/the-magic-of-the-rxjs-share-operator-6aead7dbf7fa3b87d61c.js" async=""></script><script src="/_next/static/cgisO3tvby4u9NSJrRkfa/_buildManifest.js" async=""></script><script src="/_next/static/cgisO3tvby4u9NSJrRkfa/_ssgManifest.js" async=""></script></body></html>
+// subscription 2:  4</pre></code></div><div class="Home_footer__1WdhD"><b>Reference documentation</b><ul><li><a href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/share.ts" class="underlined-link">RxJS source code (caution: check your version as the share operator has undergone changes between versions)</a></li><li><a href="https://medium.com/@mikesnare/angular-async-pipes-beware-the-share-bcc9c1cd849d" class="underlined-link">Beware the Share by Mike Snare</a></li></ul></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{}},"page":"/code/the-magic-of-the-rxjs-share-operator","query":{},"buildId":"EFz3UPYRyTSEDbgtIgeT7","nextExport":true,"autoExport":true,"isFallback":false}</script><script nomodule="" src="/_next/static/chunks/polyfills-feb8a7604fa7fce626b2.js"></script><script src="/_next/static/chunks/main-1dbc9559b66052c81aa8.js" async=""></script><script src="/_next/static/chunks/webpack-50bee04d1dc61f8adf5b.js" async=""></script><script src="/_next/static/chunks/framework.abffcf18e526b7c0dbcd.js" async=""></script><script src="/_next/static/chunks/3ef630e34cd10ba68f9d468ac363ff81c534e1e9.af83d799cdb4720969b3.js" async=""></script><script src="/_next/static/chunks/pages/_app-039cec282a73ef98abf6.js" async=""></script><script src="/_next/static/chunks/pages/code/the-magic-of-the-rxjs-share-operator-b585d9c4303b5d710d95.js" async=""></script><script src="/_next/static/EFz3UPYRyTSEDbgtIgeT7/_buildManifest.js" async=""></script><script src="/_next/static/EFz3UPYRyTSEDbgtIgeT7/_ssgManifest.js" async=""></script></body></html>

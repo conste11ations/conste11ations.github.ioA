@@ -1,7 +1,7 @@
 html,
 body {
   padding: 0;
-  margin: 24px;
+  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-color: rgb(48, 47, 47);
@@ -22,7 +22,7 @@ code {
 }
 
 .underlined-link {
-  color: rgb(66, 104, 185);
+  color: rgb(92, 132, 219);
   text-decoration: underline;
 }
 
