@@ -1,17 +1,33 @@
 html,
 body {
   padding: 0;
-  margin: 0;
+  margin: 24px;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-color: rgb(48, 47, 47);
   color: white;
+  line-height: 1.6;
 }
 
 a {
   color: inherit;
   text-decoration: none;
   font-size: 14px;
+}
+
+code {
+  border-radius: 8px;
+  background-color: rgb(24, 23, 23);
+  padding: 16px;
+}
+
+.underlined-link {
+  color: rgb(66, 104, 185);
+  text-decoration: underline;
+}
+
+.grey {
+  color: grey;
 }
 
 .special-link {

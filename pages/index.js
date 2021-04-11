@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { motion} from "framer-motion";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
 
@@ -46,20 +46,40 @@ export default function Home() {
             transition={{ duration: 1 }}
             className={styles.card}
           >
-                <h3>Ideas</h3>
-                <p>When I pen my thoughts down</p>
+            <h3>Ideas</h3>
+            <p>When I pen my thoughts down</p>
           </motion.div>
           <motion.div
             animate={{ scale: [1.1, 1] }}
             transition={{ duration: 1 }}
             className={styles.card}
           >
-              <h3>Code</h3>
+            <h3>Code</h3>
             <p>When I code or explain tech things</p>
             <ul>
-              <li><a href="#" className="special-link">Zones, Zone.js, NgZone</a></li>                
-              <li><a href="#" className="special-link">Change Detection in Angular</a></li>
-              <li><a href="#" className="special-link">Alternatives to the Async Pipe</a></li>
+              <li>
+                <a
+                  href="code/the-magic-of-the-rxjs-share-operator"
+                  className="special-link"
+                >
+                  The magic of the RxJS share operator
+                </a>
+              </li>
+              <li>
+                <a href="#" className="special-link">
+                  Zones, Zone.js, NgZone
+                </a>
+              </li>
+              <li>
+                <a href="#" className="special-link">
+                  Change Detection in Angular
+                </a>
+              </li>
+              <li>
+                <a href="#" className="special-link">
+                  Alternatives to the Async Pipe
+                </a>
+              </li>
             </ul>
           </motion.div>
           <motion.div
@@ -67,8 +87,8 @@ export default function Home() {
             transition={{ duration: 1 }}
             className={styles.card}
           >
-              <h3>Research</h3>
-              <p>After researching various topics</p>
+            <h3>Research</h3>
+            <p>After researching various topics</p>
           </motion.div>
         </div>
       </main>
