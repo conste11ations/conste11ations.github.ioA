@@ -154,10 +154,8 @@ export class AppComponent {
               If the yellow line was
               <code>this.source$ = this.getData()</code>
             </b>
-            <p>
-              Five calls to get data for five separate subscriptions, data
-              displays asynchronously.
-            </p>
+            Five calls to get data for five separate subscriptions, data
+            displays asynchronously.
           </p>
           <p>
             <img width="500" src="/getData.gif"></img>
@@ -167,23 +165,19 @@ export class AppComponent {
               If the yellow line was
               <code>this.source$ = this.getData(share())</code>
             </b>
-            <p>
-              Three calls to get data, data displays asynchronously. Not so
-              great if you're looking for more control over your display.
-            </p>
+            Three calls to get data, data displays asynchronously. Not so great
+            if you're looking for more control over your display.
           </p>
           <p>
-            <img width="400" src="/share.gif"></img>
+            <img width="500" src="/share.gif"></img>
           </p>
           <p>
             <b>
               If the yellow line was
               <code>this.source$ = this.getData(shareReplay(1))</code>
             </b>
-            <p>
-              One call, everyone gets data all at once - everyone's on the same
-              page.
-            </p>
+            One call, everyone gets data all at once - everyone's on the same
+            page.
           </p>
           <p>
             <img width="500" src="/shareReplay.gif"></img>
