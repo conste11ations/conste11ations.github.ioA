@@ -55,7 +55,7 @@ export default function Home() {
             className={styles.card}
           >
             <h3>Code</h3>
-            <p>When I code or explain tech things</p>
+            <p>I like to ELI5 because we all deserve a clear explanation</p>
             <ul>
               <li>
                 <a
@@ -92,8 +92,6 @@ export default function Home() {
           </motion.div>
         </div>
       </main>
-
-      <footer className={styles.footer}></footer>
     </div>
   );
 }

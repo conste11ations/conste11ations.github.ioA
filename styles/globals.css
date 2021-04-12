@@ -19,6 +19,7 @@ code {
   border-radius: 8px;
   background-color: rgb(24, 23, 23);
   padding: 16px;
+  margin: 16px;
 }
 
 .underlined-link {
@@ -28,6 +29,10 @@ code {
 
 .grey {
   color: grey;
+}
+
+.yellow {
+  color: yellow;
 }
 
 .special-link {
