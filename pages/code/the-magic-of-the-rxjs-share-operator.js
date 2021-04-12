@@ -8,12 +8,11 @@ export function CodePost1() {
         <h1>The magic of the RxJS share operators</h1>
         <div className={styles.main}>
           <p>
-            There are two main ways to reap the benefits of the RxJS
-            share/shareReplay operators:
+            There are two main benefits of the RxJS share/shareReplay operators:
           </p>
           <ol>
             <li>
-              <b>Share reduces repeated computations</b>
+              <b>Share() reduces repeated computations</b>
               <ul>
                 <li>
                   With multiple subscribers to the same observable, you can
@@ -24,7 +23,8 @@ export function CodePost1() {
             </li>
             <li>
               <b>
-                ShareReplay = share + making sure "everyone's on the same page"
+                ShareReplay() = share() + making sure "everyone's on the same
+                page"
               </b>
               <ul>
                 <li>
