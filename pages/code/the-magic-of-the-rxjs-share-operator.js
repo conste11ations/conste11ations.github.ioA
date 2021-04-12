@@ -173,7 +173,7 @@ export class AppComponent {
             </p>
           </p>
           <p>
-            <img width="500" src="/share.gif"></img>
+            <img width="400" src="/share.gif"></img>
           </p>
           <p>
             <b>
