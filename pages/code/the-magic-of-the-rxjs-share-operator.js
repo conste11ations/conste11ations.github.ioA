@@ -29,7 +29,7 @@ export function CodePost1() {
               <ul>
                 <li>
                   When there are multiple subscribers, and you want to make sure
-                  they all get the same data, at the same time
+                  they all get the same data, <i>at the same time</i>
                 </li>
               </ul>
             </li>
@@ -154,21 +154,62 @@ export class AppComponent {
               If the yellow line was
               <code>this.source$ = this.getData()</code>
             </b>
+            <p>
+              Five calls to get data for five separate subscriptions, data
+              displays asynchronously.
+            </p>
+          </p>
+          <p>
+            <img width="500" src="/getData.gif"></img>
           </p>
           <p>
             <b>
               If the yellow line was
               <code>this.source$ = this.getData(share())</code>
             </b>
+            <p>
+              Three calls to get data, data displays asynchronously. Not so
+              great if you're looking for more control over your display.
+            </p>
+          </p>
+          <p>
+            <img width="500" src="/share.gif"></img>
           </p>
           <p>
             <b>
               If the yellow line was
               <code>this.source$ = this.getData(shareReplay(1))</code>
             </b>
+            <p>
+              One call, everyone gets data all at once - everyone's on the same
+              page.
+            </p>
           </p>
+          <p>
+            <img width="500" src="/shareReplay.gif"></img>
+          </p>
+          <h2>Advanced Reading for the Technically Adventurous</h2>
+          <ol>
+            <li>
+              There is no need to use share or shareReplay for ngrx/store
+              selectors{" "}
+              <a
+                className="underlined-link"
+                href="https://ngrx.io/guide/component-store/read"
+              >
+                because multicast is already enabled.
+              </a>
+            </li>
+            <li>
+              <span>
+                <pre>{`share()`}</pre> is an alias for
+                <pre>{`multicast(() => new Subject()),refCount()`}</pre>
+              </span>
+            </li>
+          </ol>
         </div>
       </div>
+      <hr />
       <footer className={styles.footer}>
         <b>Reference documentation</b>
         <ul>
