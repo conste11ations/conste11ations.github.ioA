@@ -201,10 +201,13 @@ export class AppComponent {
               </a>
             </li>
             <li>
-              <span>
-                <pre>{`share()`}</pre> is an alias for
-                <pre>{`multicast(() => new Subject()),refCount()`}</pre>
-              </span>
+              share() is an alias for{" "}
+              <a
+                className="underlined-link"
+                href="https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/share.ts"
+              >
+                multicast(() =&gt; new Subject()),refCount()
+              </a>
             </li>
           </ol>
         </div>
