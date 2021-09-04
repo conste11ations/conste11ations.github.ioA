@@ -1,9 +1,20 @@
 import Head from "next/head";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Lottie from 'react-lottie';
+import OctopusLottie from '../lotties/octopus';
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: OctopusLottie,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice"
+    }
+  };
+
   return (
     <div className={styles.container}>
       <Head>
@@ -20,6 +31,14 @@ export default function Home() {
           </p>
         </motion.div>
 
+        <div>
+          <Lottie
+            options={defaultOptions}
+            height={400}
+            width={400}
+          />
+        </div>
+
         <div className={styles.grid}>
           <motion.div
             animate={{ scale: [1.1, 1] }}
@@ -27,7 +46,7 @@ export default function Home() {
             className={styles.card}
           >
             <h3>About</h3>
-            <motion.div
+            {/* <motion.div
               animate={{
                 scale: [1, 2, 2, 1, 1],
                 rotate: [0, 0, 270, 270, 0],
@@ -39,7 +58,7 @@ export default function Home() {
                   <img src="github.svg" alt="github" />
                 </Link>
               </p>
-            </motion.div>
+            </motion.div> */}
           </motion.div>
           <motion.div
             animate={{ scale: [1.1, 1] }}
